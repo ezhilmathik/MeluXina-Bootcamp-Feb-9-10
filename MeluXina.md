@@ -6,7 +6,7 @@
 ## Use your username to connect to MeluXina
 - ### For exmaple the below example shows the user of `u100490` 
   ```
-  ssh u100490@login.lxp.lu -p 8822
+  $ ssh u100490@login.lxp.lu -p 8822
   ```
 ## Once you have logged in
 - ### Once you have logged in, you will be in a default home directory 
@@ -64,7 +64,7 @@
   ssh -L8080:NODELIST:8888 USERNAME@login.lxp.lu -p 8822
   ssh -L8080:mel2077:8888 u100490@login.lxp.lu -p 8822
   ```
-- ## Now copy and paste localhost to your browser either Chrome or FireFox
+- ## Now copy and paste localhost to your browser either to Chrome or FireFox
   ```
   http://localhost:8080
   ```
