@@ -3,13 +3,13 @@
 - ## Please take a look if you are using Mac
 - ## Please take a look if you are using Linux
 
-## Use username to connect to MeluXina
+## Use your username to connect to MeluXina
 - ### For exmaple the below example shows the user of `u100490` 
   ```
   ssh u100490@login.lxp.lu -p 8822
   ```
 ## Once you have logged in
-- ### Once you have logged in you will be in a default home directory 
+- ### Once you have logged in, you will be in a default home directory 
   ```
   [u100490@login02 ~]$ pwd
   /home/users/u100490
@@ -59,7 +59,7 @@
   [I 17:58:37.813 LabApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
   ```
 - ## Now open a new terminal on your local computer, and again login to MeluXina to access the port
-- ## Make sure you use the name NODELIST (here is is mel2077 - from squeue command you will get this number)
+- ## Make sure you use the name NODELIST (here it is mel2077 - from `squeue` command you will get this number)
   ```
   ssh -L8080:NODELIST:8888 USERNAME@login.lxp.lu -p 8822
   ssh -L8080:mel2077:8888 u100490@login.lxp.lu -p 8822
