@@ -3,9 +3,9 @@
 - ## Please take a look if you are using Mac
 - ## Please take a look if you are using Linux
 
-## Use user account to connect to MeluXina
+## Use username to connect to MeluXina
 - ### For exmaple the below example shows the user of `u100490` 
-  ```sh
+  ```
   ssh u100490@login.lxp.lu -p 8822
   ```
 ## Once you have logged in
@@ -25,7 +25,7 @@
   [u100490@login02 p200117]$ cp /tmp/climate.simg .
   [u100490@login02 p200117]$ cp /tmp/climate.sh .
   ```
-- ## Now it is time to launch the your Jupyter notebook 
+- ## Now it is time to launch your Jupyter notebook, do the following for that 
   ```
   [u100490@login03 p200117]$ sbatch climate.sh
   [u100490@login03 p200117]$ squeue 
@@ -58,10 +58,10 @@
   [I 17:58:37.813 LabApp] http://hostname:8888/
   [I 17:58:37.813 LabApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
   ```
-- ## Now open a new terminal on your local computer, and login again to MeluXina to access the port
-- ## Make sure you use the name NODELIST (here is is mel2077)
+- ## Now open a new terminal on your local computer, and again login to MeluXina to access the port
+- ## Make sure you use the name NODELIST (here is is mel2077 - from squeue command you will get this number)
   ```
-    ssh -L8080:NODELIST:8888 USERNAME@login.lxp.lu -p 8822
+  ssh -L8080:NODELIST:8888 USERNAME@login.lxp.lu -p 8822
   ssh -L8080:mel2077:8888 u100490@login.lxp.lu -p 8822
   ```
 - ## Now copy and paste localhost to your browser either Chrome or FireFox
