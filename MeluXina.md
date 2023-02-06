@@ -28,6 +28,7 @@
 - ## Now it is time to launch your Jupyter notebook, do the following for that 
   ```
   [u100490@login03 p200117]$ sbatch climate.sh
+  Submitted batch job 276009
   [u100490@login03 p200117]$ squeue 
   JOBID PARTITION     NAME     USER    ACCOUNT    STATE       TIME   TIME_LIMIT  NODES NODELIST(REASON)
   276009       gpu climate.  u100490    p200117  RUNNING       0:16        20:00      1 mel2077
