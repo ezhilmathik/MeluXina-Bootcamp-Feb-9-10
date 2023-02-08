@@ -25,12 +25,15 @@
   -rw-r-----. 1 u100490 p200117  613 Feb  3 17:06 climate.sh
   -rwxr-x---. 1 u100490 p200117 7.2G Feb  3 14:53 cfd.simg
   -rw-r-----. 1 u100490 p200117  613 Feb  3 17:06 cfd.sh
-
   ```
-- ### Once you are in the project dicretory, please copy climage.simg and climate.sh
-  ``` 
-  [u100490@login02 p200117]$ cp /tmp/climate.simg .
-  [u100490@login02 p200117]$ cp /tmp/climate.sh .
+  
+- ## For the dry run (9th February from 11:30-12:30)
+  ```
+  salloc -A p200117 --res gpudev -q dev -N 1 -t 01:00:0
+  [u100490@mel2123 p200117]$ mkdir -p $PROJECT/$USER/workspace-climate
+  [u100490@mel2123 p200117]$ module load Singularity-CE/3.10.2-GCCcore-11.3.0
+  [u100490@mel2123 p200117]$ singularity run --bind $PROJECT/$USER $PROJECT/climate.simg cp -rT /workspace $PROJECT/$USER/workspace-climate
+  [u100490@mel2123 p200117]$ singularity run --nv --bind $PROJECT/$USER $PROJECT/climate.simg jupyter lab --notebook-dir=$PROJECT/$USER/workspace-climate/python/jupyter_notebook --port=8888 --ip=0.0.0.0 --no-browser --NotebookApp.token=""
   ```
 - ## Now it is time to edit your batch script (climate.sh) and launch your Jupyter notebook, do the following for that 
   ```
