@@ -136,7 +136,7 @@
   [I 17:58:37.813 LabApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
   ```
 - ## Now open a new terminal on your local computer, and again login to MeluXina to access the port
-- ## Make sure you use the name NODELIST (here it is mel2077 - from `squeue` command you will get this number)
+- ## Make sure you use the name NODELIST (here it is `mel2077` - from `squeue` command you will get this number)
   ```
   ssh -L8080:NODELIST:8888 USERNAME@login.lxp.lu -p 8822
   ssh -L8080:mel2077:8888 u100490@login.lxp.lu -p 8822
