@@ -30,9 +30,8 @@
    total 7.2G
    -rwxrwx---. 1 u100490 p200117 7.2G Feb  3 14:53 climate.simg
    -rw-rwx---. 1 u100490 p200117  613 Feb  3 17:06 climate.sh
-  ```
-  
-- ## For the dry run (9th February from 11:30-12:30), please follow the following steps:
+   ```
+  - ## For the dry run (9th February from 11:30-12:30), please follow the following steps:
    ```
    [u100490@login02 ~]$ salloc -A p200117 --res gpudev -q dev -N 1 -t 01:00:0
    [u100490@mel2123 p200117]$ mkdir -p $PROJECT/$USER/workspace-climate
