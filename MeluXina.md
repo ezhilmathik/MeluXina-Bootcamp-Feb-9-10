@@ -98,8 +98,9 @@
   mkdir -p $PROJECT/$USER/workspace-climate
   module load Singularity-CE/3.10.2-GCCcore-11.3.0
 
-  singularity run --bind $PROJECT/$USER $PROJECT/climate.simg cp -rT /workspace $PROJECT/$USER/workspace-climate
-  singularity run --nv --bind $PROJECT/$USER $PROJECT/climate.simg jupyter lab --notebook-dir=$PROJECT/$USER/workspace-climate/python/jupyter_notebook  --port=8888 --ip=0.0.0.0 --no-browser --NotebookApp.token=""
+  singularity run --bind $PROJECT/$USER $PROJECT/$USER/climate.simg cp -rT /workspace $PROJECT/$USER/workspace-climate
+  singularity run --nv --bind $PROJECT/$USER $PROJECT/$USER/climate.simg jupyter lab --notebook-dir=$PROJECT/$USER/workspace-climate/python/jupyter_notebook --port=8888 --ip=0.0.0.0 --no-browser --NotebookApp.token=""
+
   ```
 - ## Once you have modified your climate.sh, please launch your batch script as below:
   ```
