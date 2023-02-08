@@ -32,17 +32,24 @@
   [u100490@login02 p200117]$ cp /tmp/climate.simg .
   [u100490@login02 p200117]$ cp /tmp/climate.sh .
   ```
-- ## Now it is time to launch your Jupyter notebook, do the following for that 
+- ## Now it is time to edit your batch script (climate.sh) and launch your Jupyter notebook, do the following for that 
   ```
-  [u100490@login02 p200117]$ cat climate.sh
+  [u100490@login02 p200117]$ emacs(emacs -nw)/vim climate.sh
   #!/bin/bash -l
   #SBATCH --partition=gpu 
   #SBATCH --ntasks=1
-  #SBATCH --nodes=1             # Max is 1 
-  #SBATCH --time=00:45:00
+  #SBATCH --nodes=1    
+  ############  day one ##########
+  #SBATCH --time=02:00:00         ## use this option for day one
+  #SBATCH --res ai_bootcamp_day1   ## use this option for day one
+  ################################
+  
+  ############  day two ##########
+  ######SBATCH --time=04:00:00         ## use this option for day two
+  ######SBATCH --res ai_bootcamp_day2  ## use this option for day two
+  ################################
   #SBATCH -A p200117
   #SBATCH --qos default
-  ##SBATCH --res ai_bootcamp_day1 
 
   mkdir -p $PROJECT/$USER/workspace-climate
   module load Singularity-CE/3.10.2-GCCcore-11.3.0
