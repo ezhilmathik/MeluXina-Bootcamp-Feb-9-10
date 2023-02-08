@@ -124,6 +124,7 @@
   ssh -L8080:NODELIST:8888 USERNAME@login.lxp.lu -p 8822
   ssh -L8080:mel2077:8888 u100490@login.lxp.lu -p 8822
   ```
+- ## Keep those terminal open/alive (please do not close them)
 - ## Now copy and paste localhost to your browser either to Chrome or FireFox
   ```
   http://localhost:8080
