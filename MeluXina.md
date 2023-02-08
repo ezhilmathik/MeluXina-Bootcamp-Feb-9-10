@@ -13,11 +13,19 @@
   [u100490@login02 ~]$ pwd
   /home/users/u100490
   ```
-- ### After that go to project directory (Nvidia Bootcamp activites), there you will have your singularity container and batch script. 
+- ### After that go to project directory (Nvidia Bootcamp activites).
   ```
   [u100490@login02 ~]$ cd /project/home/p200117
   [u100490@login02 p200117]$ pwd
   /project/home/p200117
+  ```
+ - ## now copy climate.simg and climate.sh from project direcoty to your user (here is u100490) directory:
+  ```
+  [u100490@login02 p200117]$ cp /project/home/p200117/climate.simg /project/home/p200117/u100490
+  [u100490@login02 p200117]$ cp /project/home/p200117/climate.sh /project/home/p200117/u100490
+  [u100490@login02 p200117]$ cd u100490
+  [u100490@login02 p200117]$ pwd
+  [u100490@login02 p200117]$ /project/home/p200117/u100490
   [u100490@login02 p200117]$ ls -lthr
   total 7.2G
   -rwxrwx---. 1 u100490 p200117 7.2G Feb  3 14:53 climate.simg
