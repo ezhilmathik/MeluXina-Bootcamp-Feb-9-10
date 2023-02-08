@@ -34,6 +34,23 @@
   ```
 - ## Now it is time to launch your Jupyter notebook, do the following for that 
   ```
+  [u100490@login02 p200117]$ cat climate.sh
+  #!/bin/bash -l
+  #SBATCH --partition=gpu 
+  #SBATCH --ntasks=1
+  #SBATCH --nodes=1             # Max is 1 
+  #SBATCH --time=00:45:00
+  #SBATCH -A p200117
+  #SBATCH --qos default
+  ##SBATCH --res ai_bootcamp_day1 
+
+  mkdir -p $PROJECT/$USER/workspace-climate
+  module load Singularity-CE/3.10.2-GCCcore-11.3.0
+
+  singularity run --bind $PROJECT/$USER $PROJECT/climate.simg cp -rT /workspace $PROJECT/$USER/workspace-climate
+  singularity run --nv --bind $PROJECT/$USER $PROJECT/climate.simg jupyter lab --notebook-dir=$PROJECT/$USER/workspace-climate/python/jupyter_notebook  --port=8888 --ip=0.0.0.0 --no-browser --NotebookApp.token=""
+
+
   [u100490@login03 p200117]$ sbatch climate.sh
   Submitted batch job 276009
   [u100490@login03 p200117]$ squeue 
