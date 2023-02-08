@@ -19,12 +19,12 @@
   [u100490@login02 p200117]$ pwd
   /project/home/p200117
   ```
- - ## now copy climate.simg and climate.sh from project direcoty to your user (here is u100490) directory:
+ - ## Now copy climate.simg and climate.sh from project direcoty to your user (for exxample, here is u100490) directory:
    ```
    [u100490@login02 p200117]$ cp /project/home/p200117/climate.simg /project/home/p200117/u100490
    [u100490@login02 p200117]$ cp /project/home/p200117/climate.sh /project/home/p200117/u100490
    ```
- - ## now copy cfd.simg and cfd.sh from project direcoty to your user (here is u100490) directory:
+ - ## Now copy cfd.simg and cfd.sh from project direcoty to your user (for example, here is u100490) directory:
    ```
    [u100490@login02 p200117]$ cp /project/home/p200117/cfd.simg /project/home/p200117/u100490
    [u100490@login02 p200117]$ cp /project/home/p200117/cfd.sh /project/home/p200117/u100490
@@ -32,9 +32,9 @@
  - ## Now go to your home directory check if all the necessary files are there (.simg and .sh)
    ```
    [u100490@login02 p200117]$ cd u100490
-   [u100490@login02 p200117]$ pwd
-   [u100490@login02 p200117]$ /project/home/p200117/u100490
-   [u100490@login02 p200117]$ ls -lthr
+   [u100490@login02 u100490]$ pwd
+   [u100490@login02 u100490]$ /project/home/p200117/u100490
+   [u100490@login02 u100490]$ ls -lthr
    total 15G
    -rw-r-x---. 1 u100490 p200117  736 Feb  8 18:59 climate.sh
    -rwxr-x---. 1 u100490 p200117 7.2G Feb  8 19:19 climate.simg
@@ -43,14 +43,14 @@
    ```
   - ## For the dry run (9th February from 11:30-12:30), please follow the following steps:
    ```
-   [u100490@login02 ~]$ salloc -A p200117 --res gpudev -q dev -N 1 -t 01:00:0
-   [u100490@mel2123 p200117]$ mkdir -p $PROJECT/$USER/workspace-climate
-   [u100490@mel2123 p200117]$ module load Singularity-CE/3.10.2-GCCcore-11.3.0
+   [u100490@login02 u100490]$ salloc -A p200117 --res gpudev -q dev -N 1 -t 01:00:0
+   [u100490@mel2123 u100490]$ mkdir -p $PROJECT/$USER/workspace-climate
+   [u100490@mel2123 u100490]$ module load Singularity-CE/3.10.2-GCCcore-11.3.0
   
-   [u100490@mel2123 p200117]$ singularity run --bind $PROJECT/$USER $PROJECT/climate.simg cp -rT /workspace $PROJECT/$USER/workspace-climate
+   [u100490@mel2123 p200117]$ singularity run --bind $PROJECT/$USER $PROJECT/$USER/climate.simg cp -rT /workspace $PROJECT/$USER/workspace-climate
    INFO:    Converting SIF file to temporary sandbox...
    INFO:    Cleaning up image...
-   [u100490@mel2123 p200117]$ singularity run --nv --bind $PROJECT/$USER $PROJECT/climate.simg jupyter lab --notebook-dir=$PROJECT/$USER/workspace-climate/python/jupyter_notebook --port=8888 --ip=0.0.0.0 --no-browser --NotebookApp.token=""
+   [u100490@mel2123 p200117]$ singularity run --nv --bind $PROJECT/$USER $PROJECT/$USER/climate.simg jupyter lab --notebook-dir=$PROJECT/$USER/workspace-climate/python/jupyter_notebook --port=8888 --ip=0.0.0.0 --no-browser --NotebookApp.token=""
    INFO:    Converting SIF file to temporary sandbox...
    WARNING: underlay of /usr/bin/nvidia-smi required more than 50 (452) bind mounts
    [W 10:10:32.723 LabApp] All authentication is disabled.  Anyone who can connect to this server will be able to run code.
@@ -64,7 +64,7 @@
    [I 10:10:33.049 LabApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
    ```
   - ## Now open a new terminal on your local computer, and again login to MeluXina to access the port
-  - ## Make sure you use the name NODELIST (here it is mel2123 - from `squeue` command you will get this number)
+  - ## Make sure you use the name NODELIST (for example, here it is mel2123 - from `squeue` command you will get this number)
     ```
     ssh -L8080:NODELIST:8888 USERNAME@login.lxp.lu -p 8822
     ssh -L8080:mel2123:8888 u100490@login.lxp.lu -p 8822
@@ -78,7 +78,7 @@
 - ## For the afternoon session (9th and 10th February)
 - ## Now it is time to edit your batch script (climate.sh) before launhing your Jupyter notebook, please follow the following steps: 
   ```
-  [u100490@login02 p200117]$ emacs(emacs -nw)/vim climate.sh
+  [u100490@login02 u100490]$ emacs(emacs -nw)/vim climate.sh
   #!/bin/bash -l
   #SBATCH --partition=gpu 
   #SBATCH --ntasks=1
@@ -103,9 +103,9 @@
   ```
 - ## Once you have modified your climate.sh, please launch your batch script as below:
   ```
-  [u100490@login03 p200117]$ sbatch climate.sh
+  [u100490@login03 u100490]$ sbatch climate.sh
   Submitted batch job 276009
-  [u100490@login03 p200117]$ squeue 
+  [u100490@login03 u100490]$ squeue 
   JOBID PARTITION     NAME     USER    ACCOUNT    STATE       TIME   TIME_LIMIT  NODES NODELIST(REASON)
   276009       gpu climate.  u100490    p200117  RUNNING       0:16        20:00      1 mel2077
   ```
@@ -120,7 +120,7 @@
   ```
 - ## Now we need to get the port that can be used to open from your browser, for that do the following steps:
   ```
-  [u100490@login03 p200117]$ head -30 slurm-276009.out 
+  [u100490@login03 u100490]$ head -30 slurm-276009.out 
   INFO:    Converting SIF file to temporary sandbox...
   INFO:    Cleaning up image...
   INFO:    Converting SIF file to temporary sandbox...
