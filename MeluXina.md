@@ -19,6 +19,13 @@
   [u100490@login02 ~]$ cd /project/home/p200117
   [u100490@login02 p200117]$ pwd
   /project/home/p200117
+  [u100490@login02 p200117]$ ls -lthr
+  total 7.2G
+  -rwxr-x---. 1 u100490 p200117 7.2G Feb  3 14:53 climate.simg
+  -rw-r-----. 1 u100490 p200117  613 Feb  3 17:06 climate.sh
+  -rwxr-x---. 1 u100490 p200117 7.2G Feb  3 14:53 cfd.simg
+  -rw-r-----. 1 u100490 p200117  613 Feb  3 17:06 cfd.sh
+
   ```
 - ### Once you are in the project dicretory, please copy climage.simg and climate.sh
   ``` 
