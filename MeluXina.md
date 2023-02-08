@@ -111,7 +111,7 @@
   ```
 - ## Now you have initiated your singularity container which will help you to open the Jupyter nootebook
   ```
-  [u100490@login03 p200117]$ ls -lthr
+  [u100490@login03 u100490]$ ls -lthr
   total 7.2G
   -rwxr-x---. 1 u100490 p200117 7.2G Feb  3 14:53 climate.simg
   -rw-r-----. 1 u100490 p200117  613 Feb  3 17:06 climate.sh
