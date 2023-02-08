@@ -13,17 +13,15 @@
   [u100490@login02 ~]$ pwd
   /home/users/u100490
   ```
-- ### After that go to project directory (Nvidia Bootcamp activites)
+- ### After that go to project directory (Nvidia Bootcamp activites), there you will have your singularity container and batch script. 
   ```
   [u100490@login02 ~]$ cd /project/home/p200117
   [u100490@login02 p200117]$ pwd
   /project/home/p200117
   [u100490@login02 p200117]$ ls -lthr
   total 7.2G
-  -rwxr-x---. 1 u100490 p200117 7.2G Feb  3 14:53 climate.simg
-  -rw-r-----. 1 u100490 p200117  613 Feb  3 17:06 climate.sh
-  -rwxr-x---. 1 u100490 p200117 7.2G Feb  3 14:53 cfd.simg
-  -rw-r-----. 1 u100490 p200117  613 Feb  3 17:06 cfd.sh
+  -rwxrwx---. 1 u100490 p200117 7.2G Feb  3 14:53 climate.simg
+  -rw-rwx---. 1 u100490 p200117  613 Feb  3 17:06 climate.sh
   ```
   
 - ## For the dry run (9th February from 11:30-12:30), please follow the following steps:
