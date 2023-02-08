@@ -76,7 +76,7 @@
     ```
   
 - ## For the afternoon session (9th and 10th February)
-- ## Now it is time to edit your batch script (climate.sh) before launhing your Jupyter notebook, please follow the following steps: 
+- ## Now it is time to edit your batch script (climate.sh) before launching your Jupyter notebook, please follow the following steps: 
   ```
   [u100490@login02 u100490]$ emacs(emacs -nw)/vim climate.sh
   #!/bin/bash -l
