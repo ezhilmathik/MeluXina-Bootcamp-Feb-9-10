@@ -28,7 +28,7 @@
   
 - ## For the dry run (9th February from 11:30-12:30), please follow the following steps:
   ```
-  salloc -A p200117 --res gpudev -q dev -N 1 -t 01:00:0
+  [u100490@login02 ~]$ salloc -A p200117 --res gpudev -q dev -N 1 -t 01:00:0
   [u100490@mel2123 p200117]$ mkdir -p $PROJECT/$USER/workspace-climate
   [u100490@mel2123 p200117]$ module load Singularity-CE/3.10.2-GCCcore-11.3.0
   
