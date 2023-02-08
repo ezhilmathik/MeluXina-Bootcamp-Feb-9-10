@@ -1,7 +1,6 @@
-### [How to login to MeluXina machine](https://docs.lxp.lu/first-steps/quick_start/)
-- ## [Please take a look if you are using Windows](https://docs.lxp.lu/first-steps/connecting/)
-- ## Please take a look if you are using Mac - please follow the Linux procedures
-- ## Please take a look if you are using Linux
+## [How to login to MeluXina machine](https://docs.lxp.lu/first-steps/quick_start/)
+- ### [Please take a look if you are using Windows](https://docs.lxp.lu/first-steps/connecting/)
+- ### [Please take a look if you are using Linux/Mac](https://docs.lxp.lu/first-steps/connecting/)
 
 ## Use your username to connect to MeluXina
 - ### For exmaple the below example shows the user of `u100490` 
