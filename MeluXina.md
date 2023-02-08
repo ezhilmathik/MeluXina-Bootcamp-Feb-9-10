@@ -1,6 +1,6 @@
 ### [How to login to MeluXina machine](https://docs.lxp.lu/first-steps/quick_start/)
-- ## Please take a look if you are using Windows
-- ## Please take a look if you are using Mac
+- ## [Please take a look if you are using Windows](https://docs.lxp.lu/first-steps/connecting/)
+- ## Please take a look if you are using Mac - please follow the Linux procedures
 - ## Please take a look if you are using Linux
 
 ## Use your username to connect to MeluXina
