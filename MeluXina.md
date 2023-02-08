@@ -19,12 +19,12 @@
   [u100490@login02 p200117]$ pwd
   /project/home/p200117
   ```
- - ## Now copy climate.simg and climate.sh from project direcoty to your user directory (for exxample, here is u100490) directory:
+ - ## Now copy climate.simg and climate.sh from project direcoty to your user directory (for exxample, here is `u100490`) directory:
    ```
    [u100490@login02 p200117]$ cp /project/home/p200117/climate.simg /project/home/p200117/u100490
    [u100490@login02 p200117]$ cp /project/home/p200117/climate.sh /project/home/p200117/u100490
    ```
- - ## Similary, copy cfd.simg and cfd.sh from project direcoty to your user directory (for example, here is u100490) directory:
+ - ## Similary, copy cfd.simg and cfd.sh from project direcoty to your user directory (for example, here is `u100490`) directory:
    ```
    [u100490@login02 p200117]$ cp /project/home/p200117/cfd.simg /project/home/p200117/u100490
    [u100490@login02 p200117]$ cp /project/home/p200117/cfd.sh /project/home/p200117/u100490
