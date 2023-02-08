@@ -23,13 +23,23 @@
    ```
    [u100490@login02 p200117]$ cp /project/home/p200117/climate.simg /project/home/p200117/u100490
    [u100490@login02 p200117]$ cp /project/home/p200117/climate.sh /project/home/p200117/u100490
+   ```
+ - ## now copy cfd.simg and cfd.sh from project direcoty to your user (here is u100490) directory:
+   ```
+   [u100490@login02 p200117]$ cp /project/home/p200117/cfd.simg /project/home/p200117/u100490
+   [u100490@login02 p200117]$ cp /project/home/p200117/cfd.sh /project/home/p200117/u100490
+   ```
+ - ## Now go to your home directory check if all the necessary files are there (.simg and .sh)
+   ```
    [u100490@login02 p200117]$ cd u100490
    [u100490@login02 p200117]$ pwd
    [u100490@login02 p200117]$ /project/home/p200117/u100490
    [u100490@login02 p200117]$ ls -lthr
-   total 7.2G
-   -rwxrwx---. 1 u100490 p200117 7.2G Feb  3 14:53 climate.simg
-   -rw-rwx---. 1 u100490 p200117  613 Feb  3 17:06 climate.sh
+   total 15G
+   -rw-r-x---. 1 u100490 p200117  736 Feb  8 18:59 climate.sh
+   -rwxr-x---. 1 u100490 p200117 7.2G Feb  8 19:19 climate.simg
+   -rwxr-x---. 1 u100490 p200117 6.9G Feb  8 19:21 cfd.simg
+   -rw-r-x---. 1 u100490 p200117  723 Feb  8 19:21 cfd.sh
    ```
   - ## For the dry run (9th February from 11:30-12:30), please follow the following steps:
    ```
