@@ -26,7 +26,7 @@
   -rw-r-----. 1 u100490 p200117  613 Feb  3 17:06 cfd.sh
   ```
   
-- ## For the dry run (9th February from 11:30-12:30)
+- ## For the dry run (9th February from 11:30-12:30), please follow the following steps:
   ```
   salloc -A p200117 --res gpudev -q dev -N 1 -t 01:00:0
   [u100490@mel2123 p200117]$ mkdir -p $PROJECT/$USER/workspace-climate
