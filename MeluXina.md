@@ -60,7 +60,7 @@
   ```
   
 - ## For the afternoon session (9th and 10th February)
-- ## Now it is time to edit your batch script (climate.sh) and launch your Jupyter notebook, do the following for that 
+- ## Now it is time to edit your batch script (climate.sh) before launhing your Jupyter notebook, please follow the following steps: 
   ```
   [u100490@login02 p200117]$ emacs(emacs -nw)/vim climate.sh
   #!/bin/bash -l
@@ -84,8 +84,9 @@
 
   singularity run --bind $PROJECT/$USER $PROJECT/climate.simg cp -rT /workspace $PROJECT/$USER/workspace-climate
   singularity run --nv --bind $PROJECT/$USER $PROJECT/climate.simg jupyter lab --notebook-dir=$PROJECT/$USER/workspace-climate/python/jupyter_notebook  --port=8888 --ip=0.0.0.0 --no-browser --NotebookApp.token=""
-
-
+  ```
+- ## Once you have modified your climate.sh, please launch your batch script as below:
+  ```
   [u100490@login03 p200117]$ sbatch climate.sh
   Submitted batch job 276009
   [u100490@login03 p200117]$ squeue 
