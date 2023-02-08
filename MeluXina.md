@@ -29,7 +29,7 @@
    [u100490@login02 p200117]$ cp /project/home/p200117/cfd.simg /project/home/p200117/u100490
    [u100490@login02 p200117]$ cp /project/home/p200117/cfd.sh /project/home/p200117/u100490
    ```
- - ## Now go to your home directory check if all the necessary files are there (.simg and .sh)
+ - ## Now go to your home (for example, here it is `u100490`) directory check if all the necessary files are there (.simg and .sh)
    ```
    [u100490@login02 p200117]$ cd u100490
    [u100490@login02 u100490]$ pwd
@@ -100,7 +100,6 @@
 
   singularity run --bind $PROJECT/$USER $PROJECT/$USER/climate.simg cp -rT /workspace $PROJECT/$USER/workspace-climate
   singularity run --nv --bind $PROJECT/$USER $PROJECT/$USER/climate.simg jupyter lab --notebook-dir=$PROJECT/$USER/workspace-climate/python/jupyter_notebook --port=8888 --ip=0.0.0.0 --no-browser --NotebookApp.token=""
-
   ```
 - ## Once you have modified your climate.sh, please launch your batch script as below:
   ```
@@ -116,7 +115,8 @@
   total 7.2G
   -rwxr-x---. 1 u100490 p200117 7.2G Feb  3 14:53 climate.simg
   -rw-r-----. 1 u100490 p200117  613 Feb  3 17:06 climate.sh
-  drwxr-s---. 3 u100490 p200117 4.0K Feb  3 17:09 u100490
+  -rw-r-x---. 1 u100490 p200117  724 Feb  8 19:41 cfd.sh
+  -rwxr-x---. 1 u100490 p200117 6.9G Feb  8 19:42 cfd.simg
   -rw-r--r--. 1 u100490 p200117 1.1K Feb  3 17:58 slurm-276009.out
   ```
 - ## Now we need to get the port that can be used to open from your browser, for that do the following steps:
