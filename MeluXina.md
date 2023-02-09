@@ -126,7 +126,7 @@
   -rwxr-x---. 1 u100490 p200117 6.9G Feb  8 19:42 cfd.simg
   -rw-r--r--. 1 u100490 p200117 1.1K Feb  3 17:58 slurm-276009.out
   ```
-- ## Now we need to get the port that can be used to open from your browser, for that do the following steps:
+- ## You can also check meantime if everything OK by executing the below command and you should get similar output:
   ```
   [u100490@login03 u100490]$ head -30 slurm-276009.out 
   INFO:    Converting SIF file to temporary sandbox...
