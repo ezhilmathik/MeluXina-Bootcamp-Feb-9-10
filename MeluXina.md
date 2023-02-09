@@ -83,6 +83,7 @@
     ```
   
 ## 6. For the afternoon session (9th and 10th February)
+- ## If have missed the dry run session, please go through the steps from 1-4
 - ## 6.1 Now it is time to edit your batch script (climate.sh) before launching your Jupyter notebook, please follow the following steps: 
   ```
   [u100490@login02 u100490]$ emacs(emacs -nw)/vim climate.sh
