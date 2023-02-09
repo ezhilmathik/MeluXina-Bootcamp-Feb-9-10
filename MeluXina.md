@@ -19,6 +19,13 @@
   [u100490@login02 p200117]$ pwd
   /project/home/p200117
   ```
+  
+ - ## And please create your own working folder under the project directory, for example, here it is user with `u100490`:
+   ```
+   [u100490@login02 p200117]$ mkdir $USER
+   ### or 
+   [u100490@login02 p200117]$ mkdir u100490  
+   ```
  - ## Now copy climate.simg and climate.sh from project direcoty to your user directory (for exxample, here is `u100490`) directory:
    ```
    [u100490@login02 p200117]$ cp /project/home/p200117/climate.simg /project/home/p200117/u100490
