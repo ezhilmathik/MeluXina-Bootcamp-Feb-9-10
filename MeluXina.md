@@ -1,19 +1,19 @@
-## [How to login to MeluXina machine](https://docs.lxp.lu/first-steps/quick_start/)
+## 1. [How to login to MeluXina machine](https://docs.lxp.lu/first-steps/quick_start/)
 - ### [Please take a look if you are using Windows](https://docs.lxp.lu/first-steps/connecting/)
 - ### [Please take a look if you are using Linux/Mac](https://docs.lxp.lu/first-steps/connecting/)
 
-## Use your username to connect to MeluXina
+## 2. Use your username to connect to MeluXina
 - ### For exmaple the below example shows the user of `u100490` 
   ```
   $ ssh u100490@login.lxp.lu -p 8822
   ```
-## Once you have logged in
-- ### Once you have logged in, you will be in a default home directory 
+## 3. Once you have logged in
+- ### 3.1 Once you have logged in, you will be in a default home directory 
   ```
   [u100490@login02 ~]$ pwd
   /home/users/u100490
   ```
-- ### After that go to project directory (Nvidia Bootcamp activites).
+- ### 3.2 After that go to project directory (Nvidia Bootcamp activites).
   ```
   [u100490@login02 ~]$ cd /project/home/p200117
   [u100490@login02 p200117]$ pwd
