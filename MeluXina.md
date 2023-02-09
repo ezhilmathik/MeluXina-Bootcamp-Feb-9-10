@@ -20,23 +20,23 @@
   /project/home/p200117
   ```
   
- - ## And please create your own working folder under the project directory, for example, here it is user with `u100490`:
+ ## 4. And please create your own working folder under the project directory, for example, here it is user with `u100490`:
    ```
    [u100490@login02 p200117]$ mkdir $USER
    ### or 
    [u100490@login02 p200117]$ mkdir u100490  
    ```
- - ## Now copy climate.simg and climate.sh from project direcoty to your user directory (for exxample, here is `u100490`) directory:
+ - ### 4.1 Now copy climate.simg and climate.sh from project direcoty to your user directory (for exxample, here is `u100490`) directory:
    ```
    [u100490@login02 p200117]$ cp /project/home/p200117/climate.simg /project/home/p200117/u100490
    [u100490@login02 p200117]$ cp /project/home/p200117/climate.sh /project/home/p200117/u100490
    ```
- - ## Similary, copy cfd.simg and cfd.sh from project direcoty to your user directory (for example, here is `u100490`) directory:
+ - ### 4.2 Similary, copy cfd.simg and cfd.sh from project direcoty to your user directory (for example, here is `u100490`) directory:
    ```
    [u100490@login02 p200117]$ cp /project/home/p200117/cfd.simg /project/home/p200117/u100490
    [u100490@login02 p200117]$ cp /project/home/p200117/cfd.sh /project/home/p200117/u100490
    ```
- - ## Now go to your home (for example, here it is `u100490`) directory check if all the necessary files are there (.simg and .sh)
+ - ### 4.3 Now go to your home (for example, here it is `u100490`) directory check if all the necessary files are there (.simg and .sh)
    ```
    [u100490@login02 p200117]$ cd u100490
    [u100490@login02 u100490]$ pwd
@@ -48,7 +48,7 @@
    -rwxr-x---. 1 u100490 p200117 6.9G Feb  8 19:21 cfd.simg
    -rw-r-x---. 1 u100490 p200117  723 Feb  8 19:21 cfd.sh
    ```
-  - ## For the dry run (9th February from 11:30-12:30), please follow the following steps:
+  ## 5. For the dry run (9th February from 11:30-12:30), please follow the following steps:
    ```
    [u100490@login02 u100490]$ salloc -A p200117 --res gpudev -q dev -N 1 -t 01:00:0
    [u100490@mel2123 u100490]$ mkdir -p $PROJECT/$USER/workspace-climate
@@ -70,20 +70,20 @@
    [I 10:10:33.048 LabApp] http://hostname:8888/
    [I 10:10:33.049 LabApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
    ```
-  - ## Now open a new terminal on your local computer, and again login to MeluXina to access the port
-  - ## Make sure you use the name NODELIST (for example, here it is `mel2123` - from `squeue` command you will get this number)
+  - ### 5.1 Now open a new terminal on your local computer, and again login to MeluXina to access the port
+  - ### 5.2 Make sure you use the name NODELIST (for example, here it is `mel2123` - from `squeue` command you will get this number)
     ```
     ssh -L8080:NODELIST:8888 USERNAME@login.lxp.lu -p 8822
     ssh -L8080:mel2123:8888 u100490@login.lxp.lu -p 8822
     ```
-  - ## Keep those terminals open/alive (please do not close them)
-  - ## Now copy and paste localhost to your browser either to Chrome or FireFox
+  - ## 5.3 Keep those terminals open/alive (please do not close them)
+  - ## 5.4 Now copy and paste localhost to your browser either to Chrome or FireFox
     ```
     http://localhost:8080
     ```
   
-- ## For the afternoon session (9th and 10th February)
-- ## Now it is time to edit your batch script (climate.sh) before launching your Jupyter notebook, please follow the following steps: 
+## 6. For the afternoon session (9th and 10th February)
+- ## 6.1 Now it is time to edit your batch script (climate.sh) before launching your Jupyter notebook, please follow the following steps: 
   ```
   [u100490@login02 u100490]$ emacs(emacs -nw)/vim climate.sh
   #!/bin/bash -l
@@ -108,7 +108,7 @@
   singularity run --bind $PROJECT/$USER $PROJECT/$USER/climate.simg cp -rT /workspace $PROJECT/$USER/workspace-climate
   singularity run --nv --bind $PROJECT/$USER $PROJECT/$USER/climate.simg jupyter lab --notebook-dir=$PROJECT/$USER/workspace-climate/python/jupyter_notebook --port=8888 --ip=0.0.0.0 --no-browser --NotebookApp.token=""
   ```
-- ## Once you have modified your climate.sh, please launch your batch script as below:
+- ### 6.2 Once you have modified your climate.sh, please launch your batch script as below:
   ```
   [u100490@login03 u100490]$ sbatch climate.sh
   Submitted batch job 276009
@@ -116,7 +116,7 @@
   JOBID PARTITION     NAME     USER    ACCOUNT    STATE       TIME   TIME_LIMIT  NODES NODELIST(REASON)
   276009       gpu climate.  u100490    p200117  RUNNING       0:16        20:00      1 mel2077
   ```
-- ## Now you have initiated your singularity container which will help you to open the Jupyter nootebook
+- ### 6.3 Now you have initiated your singularity container which will help you to open the Jupyter nootebook
   ```
   [u100490@login03 u100490]$ ls -lthr
   total 7.2G
@@ -126,7 +126,7 @@
   -rwxr-x---. 1 u100490 p200117 6.9G Feb  8 19:42 cfd.simg
   -rw-r--r--. 1 u100490 p200117 1.1K Feb  3 17:58 slurm-276009.out
   ```
-- ## You can also check meantime if everything OK by executing the below command and you should get similar output:
+- ### 6.4 You can also check meantime if everything OK by executing the below command and you should get similar output:
   ```
   [u100490@login03 u100490]$ head -30 slurm-276009.out 
   INFO:    Converting SIF file to temporary sandbox...
@@ -143,14 +143,14 @@
   [I 17:58:37.813 LabApp] http://hostname:8888/
   [I 17:58:37.813 LabApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
   ```
-- ## Now open a new terminal on your local computer, and again login to MeluXina to access the port
-- ## Make sure you use the name NODELIST (here it is `mel2077` - from `squeue` command you will get this number)
+- ### 6.5 Now open a new terminal on your local computer, and again login to MeluXina to access the port
+- ### 6.6 Make sure you use the name NODELIST (here it is `mel2077` - from `squeue` command you will get this number)
   ```
   ssh -L8080:NODELIST:8888 USERNAME@login.lxp.lu -p 8822
   ssh -L8080:mel2077:8888 u100490@login.lxp.lu -p 8822
   ```
-- ## Keep those terminals open/alive (please do not close them)
-- ## Now copy and paste localhost to your browser either to Chrome or FireFox
+- ### 6.7 Keep those terminals open/alive (please do not close them)
+- ### 6.8 Now copy and paste localhost to your browser either to Chrome or FireFox
   ```
   http://localhost:8080
   ```
