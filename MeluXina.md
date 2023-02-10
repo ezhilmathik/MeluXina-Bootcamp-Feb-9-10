@@ -92,13 +92,13 @@
   #SBATCH --ntasks=1
   #SBATCH --nodes=1    
   ############  day one ##########
-  #SBATCH --time=02:00:00         ## use this option for day one
-  #SBATCH --res ai_bootcamp_day1   ## use this option for day one
+  #######SBATCH --time=02:00:00         ## use this option for day one
+  #######SBATCH --res ai_bootcamp_day1   ## use this option for day one
   ################################
   
   ############  day two ##########
-  ######SBATCH --time=04:00:00         ## use this option for day two
-  ######SBATCH --res ai_bootcamp_day2  ## use this option for day two
+  #SBATCH --time=03:30:00         ## use this option for day two
+  #SBATCH --res ai_bootcamp_day2  ## use this option for day two
   ################################
   #SBATCH -A p200117
   #SBATCH --qos default
